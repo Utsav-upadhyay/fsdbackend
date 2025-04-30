@@ -10,7 +10,7 @@ const AddBook = () => {
     const image = e.target.image.value
     const newBook = { title, author, date, image }
     try {
-      const response = await axios.post("http://localhost:9000/books", newBook)
+      const response = await axios.post("https://fsdbackend-3-aj9e.onrender.com/books", newBook)
       alert(response.data)
     } catch (error) {
         alert("Error adding book:", error)
